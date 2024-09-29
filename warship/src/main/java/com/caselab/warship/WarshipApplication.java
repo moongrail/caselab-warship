@@ -45,8 +45,7 @@ public class WarshipApplication implements CommandLineRunner {
             isGameOver = gameService.checkGameOver();
 
             if (isGameOver) {
-                System.out.println("Игра окончена! ");
-				System.out.println(SpringApplication.BANNER_LOCATION_PROPERTY_VALUE);
+                System.out.println("THE END!");
             }
         }
     }

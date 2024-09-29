@@ -28,15 +28,15 @@ public class MenuPrintUtil {
     public static int[] getValidCoordinates(Scanner scanner) {
         int x = -1, y = -1;
         while (x < 0 || x >= 10 || y < 0 || y >= 10) {
-            System.out.println("Введите координаты для атаки (x y, от 0 до 9): ");
+            System.out.println("Введите координаты для атаки x и y от 0 до 9: ");
             try {
                 x = scanner.nextInt();
                 y = scanner.nextInt();
                 if (x < 0 || x >= 10 || y < 0 || y >= 10) {
-                    System.out.println("Координаты должны быть в пределах от 0 до 9.");
+                    System.out.println("ОТ НУЛЯ ДО ДЕВЯТИ!");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Введите два числа для координат.");
+                System.out.println("ЧИСЛО, ПОТОМ ПРОБЕЛ ЧИСЛО. ПРОБУЙ.");
                 scanner.next();
             }
         }
