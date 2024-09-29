@@ -28,7 +28,7 @@ public class MenuPrintUtil {
     public static int[] getValidCoordinates(Scanner scanner) {
         int x = -1, y = -1;
         while (x < 0 || x >= 10 || y < 0 || y >= 10) {
-            System.out.println("Введите координаты для атаки x и y от 0 до 9: ");
+            System.out.println("Введите x и y для атаки (от 0 до 9): ");
             try {
                 x = scanner.nextInt();
                 y = scanner.nextInt();
