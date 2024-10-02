@@ -30,6 +30,7 @@ public class GameServiceImpl implements GameService {
         player1.getBoard().placeShipsRandomly();
         player2.getBoard().placeShipsRandomly();
         System.out.println("Корабли успешно размещены.");
+        printAdvice();
     }
 
     @Override
@@ -62,5 +63,12 @@ public class GameServiceImpl implements GameService {
         Player player = playerNumber == 1 ? player1 : player2;
         System.out.println("Поле игрока " + player.getName() + ":");
         printBoard(player.getBoard());
+    }
+
+    private static void printAdvice() {
+        System.err.println("'~' - Вода");
+        System.err.println("'S' - Корабль");
+        System.err.println("'X' - Попадание");
+        System.err.println("'О' - Промах");
     }
 }
